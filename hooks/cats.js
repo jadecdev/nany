@@ -2,7 +2,7 @@
  * Created by Jade on 01/07/2017.
  */
 'use strict';
-const utils = require('./utils');
+const utils = require('./_utils');
 
 const CAT_IMAGE = [
     'https://developers.google.com/web/fundamentals/accessibility/semantics-builtin/imgs/160204193356-01-cat-500.jpg',
