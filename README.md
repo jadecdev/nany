@@ -7,10 +7,12 @@ To add a function:
 2. add a function and export
 
 Example:
+```javascript
 exports.welcome = function welcome(app) {
     let now = new Date();
     app.ask(`Now is ${now}. Hello!`, 'I didn\'t hear that.');
 };
+```
 
 3. add intent on api.ai and give an action.name
 
