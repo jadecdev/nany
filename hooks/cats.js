@@ -34,12 +34,12 @@ exports.tellCatFact = function (app) {
         // Add facts context to outgoing context list
         app.setContext(utils.FACTS_CONTEXT, utils.DEFAULT_LIFESPAN, {});
         // Replace outgoing cat-facts context with lifespan = 0 to end it
-        app.setContext(utils.CAT_CONTEXT, utils.END_LIFESPAN, {});
+        app.setContext(CAT_CONTEXT, utils.END_LIFESPAN, {});
         if (app.hasSurfaceCapability(app.SurfaceCapabilities.SCREEN_OUTPUT)) {
             app.ask(app.buildRichResponse()
                 .addSimpleResponse('Looks like you\'ve heard all there is to know ' +
                     'about cats. Would you like to hear about Google?', utils.NO_INPUTS)
-                .addSuggestions(exports.CONFIRMATION_SUGGESTIONS));
+                .addSuggestions(utils.CONFIRMATION_SUGGESTIONS));
         } else {
             app.ask('Looks like you\'ve heard all there is to know ' +
                 'about cats. Would you like to hear about Google?', utils.NO_INPUTS);
@@ -63,4 +63,4 @@ exports.tellCatFact = function (app) {
             utils.NO_INPUTS);
     }
     return;
-}
+};

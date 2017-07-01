@@ -61,7 +61,7 @@ exports.tellFact = function tellFact(app) {
     let factCategory = app.getArgument(utils.CATEGORY_ARGUMENT);
 
     if (factCategory === FACT_TYPE.HISTORY) {
-        let fact = utils.getRandomFact(historyFacts);
+        let fact = utils.getRamdomFacts(historyFacts);
         if (fact === null) {
             if (app.hasSurfaceCapability(app.SurfaceCapabilities.SCREEN_OUTPUT)) {
                 let suggestions = ['Headquarters'];
@@ -81,7 +81,7 @@ exports.tellFact = function tellFact(app) {
         let factPrefix = 'Sure, here\'s a history fact. ';
         app.data.historyFacts = Array.from(historyFacts);
         if (app.hasSurfaceCapability(app.SurfaceCapabilities.SCREEN_OUTPUT)) {
-            let image = getRandomImage(GOOGLE_IMAGES);
+            let image = utils.getRandomImage(GOOGLE_IMAGES);
             app.ask(app.buildRichResponse()
                 .addSimpleResponse(factPrefix)
                 .addBasicCard(app.buildBasicCard(fact)
@@ -94,7 +94,7 @@ exports.tellFact = function tellFact(app) {
         }
         return;
     } else if (factCategory === FACT_TYPE.HEADQUARTERS) {
-        let fact = getRandomFact(hqFacts);
+        let fact = utils.getRamdomFacts(hqFacts);
         if (fact === null) {
             if (app.hasSurfaceCapability(app.SurfaceCapabilities.SCREEN_OUTPUT)) {
                 let suggestions = ['History'];
@@ -113,7 +113,7 @@ exports.tellFact = function tellFact(app) {
         let factPrefix = 'Okay, here\'s a headquarters fact. ';
         app.data.hqFacts = Array.from(hqFacts);
         if (app.hasSurfaceCapability(app.SurfaceCapabilities.SCREEN_OUTPUT)) {
-            let image = getRandomImage(GOOGLE_IMAGES);
+            let image = utils.getRandomImage(GOOGLE_IMAGES);
             app.ask(app.buildRichResponse()
                 .addSimpleResponse(factPrefix)
                 .addBasicCard(app.buildBasicCard(fact)
@@ -139,7 +139,7 @@ Google's history, or its headquarters. Which one do you want to \
 hear about?`, utils.NO_INPUTS);
         }
     }
-}
+};
 
 // Say they've heard it all about this category
 function noFactsLeft(app, currentCategory, redirectCategory) {
