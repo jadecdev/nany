@@ -17,7 +17,9 @@ exports.welcome = function welcome(app) {
 3. add intent on api.ai and give an action.name
 
 3. In the index file, in the webhook function, add your hook
+```javascript
 actionMap.set(action.name, new_file.welcome);
+```
 
 4. deploy with npm run deploy
 
