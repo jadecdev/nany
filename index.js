@@ -26,8 +26,7 @@ const UNRECOGNIZED_DEEP_LINK = 'deeplink.unknown';
 const TELL_FACT = 'tell.fact';
 const TELL_CAT_FACT = 'tell.cat.fact';
 const WELCOME = 'input.welcome';
-
-
+const PERMISSION_CONFIRMATION = 'permission.confirmation';
 
 
 // Greet the user and direct them to next turn
@@ -49,18 +48,19 @@ Google's history or its headquarters. Which do you want to hear about?`,
 }
 
 
-
 exports.babysitter = functions.https.onRequest((request, response) => {
     const app = new App({request, response});
     console.log('Request headers: ' + JSON.stringify(request.headers));
     console.log('Request body: ' + JSON.stringify(request.body));
 
-
     let actionMap = new Map();
+    actionMap.set(WELCOME, welcome.welcome);
+    actionMap.set(PERMISSION_CONFIRMATION, welcome.confirm);
+
     actionMap.set(UNRECOGNIZED_DEEP_LINK, unhandledDeepLinks);
     actionMap.set(TELL_FACT, google.tellFact);
     actionMap.set(TELL_CAT_FACT, cats.tellCatFact);
-    actionMap.set(WELCOME, welcome.welcome);
 
     app.handleRequest(actionMap);
+
 });

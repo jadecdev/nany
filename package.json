@@ -11,7 +11,7 @@
   "scripts": {
     "lint": "semistandard --fix \"**/*.js\"",
     "start": "firebase serve --only functions",
-    "deploy": "firebase deploy --only functions"
+    "deploy": "git commit -am 'new changes'; firebase deploy --only functions"
   },
   "dependencies": {
     "actions-on-google": "^1.0.0",

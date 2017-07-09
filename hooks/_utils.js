@@ -1,4 +1,6 @@
 'use strict';
+//webhook : https://us-central1-ggl-template-apiai.cloudfunctions.net/babysitter
+//ngrok : https://c5b411af.ngrok.io
 
 // API.AI parameter names
 exports.CATEGORY_ARGUMENT = 'category';
