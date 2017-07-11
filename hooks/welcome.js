@@ -4,7 +4,7 @@ const utils = require('./_utils');
 exports.welcome = function welcome(app) {
     const permission = app.SupportedPermissions.DEVICE_PRECISE_LOCATION;
     // app.askForPermission('To get your city', permission);
-    app.tell(`<speak  version="1.1" xmlns="http://www.w3.org/2001/10/synthesis"
+    app.tell(`<speak xmlns="http://www.w3.org/2001/10/synthesis"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.w3.org/2001/10/synthesis
                  http://www.w3.org/TR/speech-synthesis11/synthesis.xsd"
