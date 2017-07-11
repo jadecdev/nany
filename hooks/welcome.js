@@ -4,12 +4,7 @@ const utils = require('./_utils');
 exports.welcome = function welcome(app) {
     const permission = app.SupportedPermissions.DEVICE_PRECISE_LOCATION;
     // app.askForPermission('To get your city', permission);
-    app.tell(`<speak version="1.1" 
-    xmlns="http://www.w3.org/2001/10/synthesis"
-     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.w3.org/2001/10/synthesis
-    http://www.w3.org/TR/speech-synthesis11/synthesis.xsd"
-       xml:lang="en-US">
+    app.tell(`<speak>
        
        Once upon a time there was an old mother pig who had three little pigs and not enough food to feed them. <voice gender="male">So when they were old enough,</voice> she sent them out into the world to seek their fortunes.
 
