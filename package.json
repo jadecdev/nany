@@ -12,7 +12,7 @@
     "lint": "semistandard --fix \"**/*.js\"",
     "start": "firebase serve --only functions",
     "deploy": "git commit -am 'new changes'; firebase deploy --only functions",
-    "push": "git push origin master"
+    "push": "git pull origin master; git push origin master;"
   },
   "dependencies": {
     "actions-on-google": "^1.0.0",
