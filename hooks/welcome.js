@@ -4,9 +4,9 @@ const utils = require('./_utils');
 exports.welcome = function welcome(app) {
     const permission = app.SupportedPermissions.DEVICE_PRECISE_LOCATION;
     // app.askForPermission('To get your city', permission);
-    app.tell(`<speak>
+    app.tell(`<speak xml:lang="en-US">
        
-       Once upon a time there was an old mother pig who had three little pigs and not enough food to feed them. <voice gender="male">So when they were old enough,</voice> she sent them out into the world to seek their fortunes.
+       Once upon a time there was an old mother pig who had three little pigs and not enough food to feed them. <voice gender="male" variant="2">So when they were old enough,</voice> she sent them out into the world to seek their fortunes.
 
     <break/>
     <emphasis>The first little pig was very lazy</emphasis>. <p xml:lang="fr">He didn't want to work at all </p> and he built his house out of straw. <voice age="6">The second little pig worked a little bit harder </voice> but he was somewhat lazy too and he built his house out of sticks. Then, they sang and danced and played together the rest of the day.
