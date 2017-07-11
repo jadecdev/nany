@@ -8,11 +8,15 @@ exports.welcome = function welcome(app) {
        
        Once upon a time there was an old mother pig who had three little pigs and not enough food to feed them. <voice gender="male">So when they were old enough,</voice> she sent them out into the world to seek their fortunes.
 
+    <break/>
     <emphasis>The first little pig was very lazy</emphasis>. <p xml:lang="fr">He didn't want to work at all </p> and he built his house out of straw. <voice age="6">The second little pig worked a little bit harder </voice> but he was somewhat lazy too and he built his house out of sticks. Then, they sang and danced and played together the rest of the day.
 
     <s><prosody volume="+6dB">The third little pig </prosody></s> worked hard all day and built his house with bricks. It was a sturdy house complete with a fine fireplace and chimney. It looked like it could withstand the strongest winds.
 
-        The next day, a wolf happened to pass by the lane where the three little pigs lived; and he saw the straw house, and he smelled the pig inside. He thought the pig would make a mighty fine meal and his mouth began to water.
+        <p><s>The next day, a wolf happened to pass by the lane where the three little pigs lived;</s>
+         <s>and he saw the straw house,</s>
+         <s>and he smelled the pig inside.</s>
+          </p>He thought the pig would make a mighty fine meal and his mouth began to water.
 
         So he knocked on the door and said:
 
